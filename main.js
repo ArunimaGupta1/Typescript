@@ -1,41 +1,5 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 2, 2, 2, 22, 2];
-var Count = /** @class */ (function () {
-    function Count() {
-    }
-    Count.prototype.Count = function () {
-        console.log(array.filter(function (x) { return x === 2; }).length);
-    };
-    return Count;
-}());
-var Sum = /** @class */ (function (_super) {
-    __extends(Sum, _super);
-    function Sum() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Sum.prototype.sum = function () {
-        var sum = 0;
-        for (var i = 0; i < array.length; i++) {
-            sum += array[i];
-        }
-        console.log("Sum " + sum);
-    };
-    return Sum;
-}(Count));
-var obj = new Sum();
-obj.sum();
-obj.Count();
+var shape = {};
+shape.length = 10;
+shape.color = 'Red';
+console.log('Color of the shape is ' + shape.color);
+console.log('Length of the shape is ' + shape.length);

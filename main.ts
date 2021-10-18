@@ -1,23 +1,14 @@
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9,3,2,2,2,22,2];
-
-//Parent class
-class Count {
-    Count() {
-        console.log(array.filter(x => x === 2).length)
-    }
+interface Color{
+    color:string;
 }
 
-//Child class
-class Sum extends Count{
-    sum(){
-        let sum = 0
-        for(var i=0;i<array.length;i++){
-            sum+=array[i];
-        }
-        console.log("Sum "+sum);
-    }
+interface Length extends Color{
+    length:number;
 }
 
-let obj = new Sum();
-obj.sum();
-obj.Count();//accessing parent class method using child class object
+var shape = <Length>{};
+shape.length = 10;
+shape.color = 'Red';
+
+console.log('Color of the shape is '+shape.color);
+console.log('Length of the shape is '+shape.length);
